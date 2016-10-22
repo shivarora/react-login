@@ -8,7 +8,7 @@ const driver = new webdriver.Builder()
     .forBrowser('chrome')
     .build();
 
-describe('login form', (res) => {
+describe('login form', function () {
     // e2e tests are too slow for default Mocha timeout
 
     before(function(done) {
