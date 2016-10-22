@@ -12,7 +12,7 @@ describe('login form', function () {
     // e2e tests are too slow for default Mocha timeout
 
     before(function(done) {
-        this.timeout(5000);
+        this.timeout(15000);
         driver.navigate().to(' http://localhost:3334/')
             .then(function() {
                 done()
@@ -20,7 +20,7 @@ describe('login form', function () {
     });
 
     it('autocompletes the name field', function(done) {
-        this.timeout(5000);
+        this.timeout(15000);
         driver.findElement(By.name('email')).sendKeys('John');
         //driver.wait(until.elementLocated(By.name('password')).sendKeys('123455655544444'))
         driver.findElement(By.name('password')).sendKeys('123455655544444')
