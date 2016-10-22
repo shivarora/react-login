@@ -1,4 +1,4 @@
-require('chromedriver');
+//require('chromedriver');
 var expect = require('chai').expect;
 const webdriver = require('selenium-webdriver');
 const By = webdriver.By;
@@ -14,7 +14,9 @@ describe('login form', function () {
     before(function(done) {
         this.timeout(5000);
         driver.navigate().to(' http://localhost:3334/')
-            .then(() => done());
+            .then(function() {
+                done()
+            });
     });
 
     it('autocompletes the name field', function(done) {
@@ -23,11 +25,15 @@ describe('login form', function () {
         //driver.wait(until.elementLocated(By.name('password')).sendKeys('123455655544444'))
         driver.findElement(By.name('password')).sendKeys('123455655544444')
        //driver.findElement(By.name('submit')).click()
-            .then(() => done());
+            .then(function () {
+                done()
+            });
     });
 
     after(function(done) {
          driver.quit()
-             .then(() => done())
+             .then(function () {
+                 done()
+             })
     });
 });
