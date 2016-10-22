@@ -26,6 +26,7 @@
     "proxyquire": "^1.7.10",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
+    "selenium-webdriver": "^3.0.0-beta-3",
     "sinon": "^1.17.6",
     "sinon-as-promised": "^4.0.2",
     "sinon-chai": "^2.8.0",
