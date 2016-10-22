@@ -48,5 +48,3 @@ config.json
 /spmlogs
 aws.sns
 .aws.*
-/test
-/
