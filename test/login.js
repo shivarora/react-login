@@ -1,11 +1,10 @@
-//require('chromedriver');
 var expect = require('chai').expect;
 const webdriver = require('selenium-webdriver');
 const By = webdriver.By;
 const until = webdriver.until;
 
 const driver = new webdriver.Builder()
-    .forBrowser('phantomjs')
+    .forBrowser('chrome')
     .build();
 
 describe('login form', function () {
@@ -22,9 +21,7 @@ describe('login form', function () {
     it('autocompletes the name field', function(done) {
         this.timeout(15000);
         driver.findElement(By.name('email')).sendKeys('John');
-        //driver.wait(until.elementLocated(By.name('password')).sendKeys('123455655544444'))
         driver.findElement(By.name('password')).sendKeys('123455655544444')
-       //driver.findElement(By.name('submit')).click()
             .then(function () {
                 done()
             });
